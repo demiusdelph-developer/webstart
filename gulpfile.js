@@ -12,3 +12,11 @@ let gulp = require('gulp'),
       }))
       .pipe(gulp.dest('css'));
   });
+
+  gulp.task('browser-sync', () => {
+    browserSync.init({
+      server: {
+        baseDir: './'
+      }
+    });
+  });
