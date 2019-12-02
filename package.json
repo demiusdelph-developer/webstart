@@ -1,0 +1,31 @@
+{
+  "name": "webstart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/demiusdelph-developer/webstart.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/demiusdelph-developer/webstart/issues"
+  },
+  "homepage": "https://github.com/demiusdelph-developer/webstart#readme",
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "filesize": "^6.0.1",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-cli": "^2.2.0",
+    "temp-write": "^4.0.0"
+  },
+  "devDependencies": {
+    "cssmin": "^0.4.3",
+    "gulp-cssmin": "^0.2.0"
+  }
+}
