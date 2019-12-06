@@ -4,16 +4,6 @@ const {src,dest,watch} = require('gulp'),
       browserSync = require('browser-sync').create(),
       sass = require('gulp-sass');
 
-  // function minifyCSS() {
-  //   return src(['css/*.css', '!css/*.min.css'])
-  //     .pipe(cleanCSS({compatibility: 'ie8'}))
-  //     .pipe(rename({
-  //       suffix: '.min',
-  //       prefix: ''
-  //     }))
-  //     .pipe(dest('css'));
-  // }
-
   function bs(){
     serveSass();
     browserSync.init({
@@ -23,11 +13,12 @@ const {src,dest,watch} = require('gulp'),
     });
     watch("./*.html").on('change', browserSync.reload);
     watch("./sass/**/*.sass", serveSass);
+    watch("./sass/**/*.scss", serveSass);
     watch("./*.js").on('change', browserSync.reload);
   }
 
   function serveSass() {
-    return src("./sass/*.sass")
+    return src("./sass/*.sass", "./sass/*.scss")
         .pipe(sass())
         .pipe(rename({
           suffix: '.min',
