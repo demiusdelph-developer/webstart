@@ -12,8 +12,11 @@
     transition: box-shadow 0.3s
     &:hover
       box-shadow: none
+      background-color: lighten($logoColor, 10%)
   &--outline
     color: $light
     background-color: transparent
     border: 1px solid $light
+    &:hover
+      background-color: lighten($dark, 10%)
     
