@@ -1,8 +1,10 @@
 .hero
   position: relative
+  padding-top: 100px
   background: $dark url('../img/hero_bg.jpg') no-repeat center / cover
   height: 100vh
   color: $light
+  display: flex
   &::before
     content: ''
     position: absolute
@@ -44,17 +46,14 @@
       &::after
         border-color: lighten($logoColor, 10%)
   &__content
-    position: absolute
-    top: 33%
-    margin-left: 4.2rem 
-    max-width: 47.85rem
+    position: relative
+    max-width: 670px
   &__text
-    font-size: 1.58rem
-    line-height: 2.05rem
-    max-width: 35.71rem
-    margin: 1.05rem 0 3.5rem 0
+    font-size: 22px
+    line-height: 30px
+    max-width: 500px
   &__button
-    margin-right: 1.2rem
+    margin-right: 20px
 .instagram
   background-color: $dark
   display: flex
@@ -63,27 +62,25 @@
   &__link
     display: flex
     align-items: center 
-    margin-bottom: 17.25rem
     text-decoration: none
     text-transform: uppercase
     color: $logoColor
     transform: rotate(90deg)
-    font-family: 'Futura Demi'
-    line-height: 0.9
+    line-height: 0.8
     &:hover
       color: lighten($logoColor, 10%)
     &::after
       content: ''
-      width: 3.7rem
+      width: 50px
       height: 1px
       background-color: $logoColor
-      margin-left: 0.95rem
+      margin-left: 8px
 .title
-  font-family: 'Yeseva One';
-  font-size: 2.85rem
+  margin: 0
+  font-family: 'Yeseva One', cursive;
+  font-size: 40px
   text-transform: uppercase
   font-weight: normal
-  line-height: 3.8rem
-  margin-top: 1.8rem
+  line-height: 53px
   &--primary
     color: $logoColor
