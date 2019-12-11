@@ -3,6 +3,10 @@
   background: $dark url('../img/hero_bg.jpg') no-repeat center / cover
   height: 100vh
   color: $light
+  display: flex
+  align-items: center
+  justify-content: center
+  padding-bottom: 1.4rem
   &::before
     content: ''
     position: absolute
@@ -44,15 +48,15 @@
       &::after
         border-color: lighten($logoColor, 10%)
   &__content
-    position: absolute
-    top: 33%
-    margin-left: 4.2rem 
+    position: relative
+    margin-left: 3.65rem 
     max-width: 47.85rem
   &__text
     font-size: 1.58rem
-    line-height: 2.05rem
+    line-height: 2.2rem
     max-width: 35.71rem
-    margin: 1.05rem 0 3.5rem 0
+    margin-bottom: 3.1rem
+    margin-top: -1rem
   &__button
     margin-right: 1.2rem
 .instagram
@@ -63,7 +67,6 @@
   &__link
     display: flex
     align-items: center 
-    margin-bottom: 17.25rem
     text-decoration: none
     text-transform: uppercase
     color: $logoColor
@@ -84,6 +87,6 @@
   text-transform: uppercase
   font-weight: normal
   line-height: 3.8rem
-  margin-top: 1.8rem
+  margin-top: 2.4rem
   &--primary
     color: $logoColor
