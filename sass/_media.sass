@@ -16,7 +16,7 @@
     margin-right: 3rem
   .nav
     &__item
-      margin-right: 1.5rem
+      margin-right: 1.3rem
   .phone
       margin-right: 1.5rem
 
@@ -26,8 +26,15 @@
       display: none
   .instagram
     display: none
+  .hero
+    &__content
+      margin-left: 0
+  .logo
+    margin-left: 0
 
 @media screen and ( max-width: 576px )
+  html
+    font-size: 0.6rem
   .hero
     &__content
       margin-left: 0
@@ -42,6 +49,13 @@
         color: lighten($logoColor, 10%)
     &__button
       display: none
+  .hero
+    &__scroll
+      display: none
+    &__title
+      font-size: 2.3rem
+  .title
+    line-height: 3rem
     
 
 
