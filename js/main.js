@@ -1,15 +1,13 @@
-window.addEventListener('DOMContentLoaded', () => {
-  'use strict';
+$(document).ready(function () {
+  var modal = $('.modal'),
+      modalBtn = $('[data-toggle="modal"]'),
+      closeBtn = $('.modal__close');
 
-  const modal = document.querySelector('.modal'),
-        modalBtn = document.querySelectorAll('[data-toggle=modal]'),
-        closeBtn = document.querySelector('.modal__close'),
-        switchModal = () => {
-          modal.classList.toggle('modal--visible')
-        }
-  modalBtn.forEach(i => {
-    i.addEventListener('click', switchModal);
+  modalBtn.on('click', function() {
+    modal.toggleClass('modal--visible');
   });
-  closeBtn.addEventListener('click', switchModal);
+  closeBtn.on('click', function() {
+    modal.toggleClass('modal--visible');
+  })
 });
 
