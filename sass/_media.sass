@@ -1,20 +1,26 @@
 @media screen and ( max-width: 1437px  )
   .container
     width: 87.714rem
+    .logo
+      margin-left: 4.5rem
   .nav
     &__item
       margin-right: 1.8rem
-  
+  .hero
+      &__content
+        margin-left: 2rem
+  .hero
+    &__content
+      margin-left: 7rem
 
 @media screen and ( max-width: 1256px )
   html
     font-size: 12px
   .container
-    max-width: 88%
-    width: 84.714rem
-  .logo
-    margin-left: 1.5rem
-    margin-right: 3rem
+    max-width: 94%
+    width: 86.714rem
+    .logo
+      margin-right: 5.0rem
   .nav
     &__item
       margin-right: 1.3rem
@@ -25,17 +31,8 @@
       width: 100%
     &__text
       width: 85%
+    
 
-@media screen and ( max-width: 768px )
-  html
-    font-size: 0.7rem
-  .row
-    display: flex
-    justify-content: center
-  .card
-    &__text
-      width: 89%
-      
 
 @media screen and ( max-width: 992px )
   .nav
@@ -48,14 +45,38 @@
       margin-left: 0
   .logo
     margin-left: 0
+  .row
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    align-items: flex-start
+    .col
+      display: flex
+      justify-content: center
+      min-width: 48%
+      .card
+        max-width: 95%
+        &__text
+          // max-width: 23.6rem
+
+@media screen and ( max-width: 768px )
+  .row
+    display: flex
+    justify-content: center
+    .col
+      max-width: 90%
+      .card
+        &__text
+          width: 90%
+          // max-width: 18.6rem
+          margin-left: 0
+        &__title
+          font-size: 1.06rem
   
 @media screen and ( max-width: 576px )
-  html
-    font-size: 10px
-  .header__container
+  .container
     padding: 0.6rem 0
-  .hero
-    &__content
+    .logo
       margin-left: 0
   .button
     width: 100%
@@ -76,19 +97,31 @@
       font-size: 2.3rem
       max-width: 27rem
     &__text
-      font-size: 1.8rem
+      font-size: 1.5rem
       max-width: 32rem
   .title
     line-height: 3rem
-  .card
-    &__image
-      width: 100%
-    &__text
-      width: 80%
-      font-size: 1.7rem
+  .row
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    .col
+      .card
+        max-width: 100% 
+        &__image
+          width: 100%
+        &__text
+          font-size: 1rem
+          width: 19.8rem
+          margin-left: 0
+        &__title
+          font-size: 1.25rem
   .modal
     &__dialog
-      max-width: 30.36rem
+       max-width: 30.36rem
+    .modal__button--min
+
 
 @media screen and ( min-width: 768px )
   .section
