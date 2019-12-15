@@ -39,4 +39,32 @@
   padding: 0.5rem 0
   &::placeholder
     color: $light
+
+.scrollBtn
+  &__up
+    position: fixed
+    right: 0
+    bottom: 0
+    min-width: 4rem
+    min-height: 4rem
+    background-color: $dark
+    display: flex
+    justify-content: center
+    align-items: center
+    text-transform: uppercase
+    color: $light
+    text-decoration: none
+    &:hover
+      color: lighten($logoColor, 10%)
+    &::after
+      content: ''
+      background: url('../img/arrow-down.svg') no-repeat center
+      width: 30px
+      height: 30px
+      border: 2px solid $logoColor
+      border-radius: 50%
+      transform: rotate(180deg)
+    &:hover
+      &::after
+        border-color: lighten($logoColor, 10%)
     

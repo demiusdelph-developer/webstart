@@ -25,12 +25,16 @@ $(document).ready(function () {
   var modal = $('.modal'),
       modalDialog = $('.modal__dialog'),
       modalBtn = $('[data-toggle="modal"]'),
-      closeBtn = $('.modal__close');
+      closeBtn = $('.modal__close'),
+      srcollBtn = $('.scrollBtn');
 
-  modalBtn.on('click', function() {
+
+  modalBtn.on('click', function(e) {
+    e.preventDefault();
     modal.toggleClass('modal--visible');
   });
   modal.on('click', function(e) {
+    e.preventDefault();
     if(!modalDialog.is(e.target) && modalDialog.has(e.target).length === 0) {
       modal.toggleClass('modal--visible');
     }
@@ -41,5 +45,19 @@ $(document).ready(function () {
   $(document).keydown(function(e) {
     if(e.keyCode == 27) modal.toggleClass('modal--visible');
   });
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 350) {
+      srcollBtn.addClass('scrollBtn__up');
+      console.log('yes')
+    } else {
+      srcollBtn.removeClass('scrollBtn__up');
+    }
+  });
+  
+  srcollBtn.on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({scrollTop:0}, '200');
+  });
+  
 });
 
