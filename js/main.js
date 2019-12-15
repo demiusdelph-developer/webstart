@@ -58,6 +58,14 @@ $(document).ready(function () {
     e.preventDefault();
     $('html, body').animate({scrollTop:0}, '200');
   });
+
+  var mySwiper = new Swiper ('.swiper-container', {
+    // Optional parameters
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
+  });
   
 });
-
