@@ -66,6 +66,14 @@ $(document).ready(function () {
       el: '.swiper-pagination',
       type: 'bullets',
     },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
   });
+  var next = $('.swiper-button-next'),
+      prev = $('.swiper-button-next'),
+      bullets = $('.swiper-pagination');
+       
   
 });

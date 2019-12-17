@@ -76,21 +76,25 @@
           margin-left: 0
         &__title
           font-size: 1.16rem
+  .swiper
+    &-slide
+      &-image
+        margin-top: 0
   
 @media screen and ( max-width: 576px )
   .container
     padding: 0 0
     .logo
       margin-left: 0.5rem
+      margin-right: 3rem
   .button
-    width: 96%
+    width: 100%
     margin-top: 2rem
     padding: 2rem 0
   .contacts
     &__phone
       color: #ffffff
       text-decoration: none
-      margin-right: 0.8 rem
       &:hover
         color: lighten($logoColor, 10%)
     &__button
@@ -106,7 +110,7 @@
     &__text
       font-size: 1.5rem
   .title
-    line-height: 3rem
+    line-height: 2.8rem
   .row
     display: flex
     flex-direction: column
@@ -135,7 +139,13 @@
       max-width: 15.72rem
       margin: auto
       padding: 1rem 3rem
-
+  .swiper
+    &-slide
+      &-top
+        order: -1
+        width: 100%
+  .col-50
+    width: 100%
 
 @media screen and ( min-width: 768px )
   .section

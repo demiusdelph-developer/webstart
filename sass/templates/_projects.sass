@@ -1,10 +1,24 @@
 .swiper
   &-slide
+    &-image
+      margin-top: -13rem
     display: flex
+    align-items: flex-start
     flex-wrap: wrap
+    &__section
+      display: flex
+      flex-direction: row
+      &-title-left
+        width: 50%
     &__text
-      flex-basis: 50%
       margin-bottom: 2.42rem
+      height: auto
+      margin-right: 2.1rem
+      width: 11rem
+      h4
+        font-size: 1.3rem
+        font-weight: normal
+        width: 50%
     &__heading
       font-size: 1.85rem
       line-height: 1.78rem
@@ -13,7 +27,37 @@
       text-transform: uppercase
       margin-bottom: 0.64rem
   &-pagination
+    position: relative
     &-bullet
       background-color: rgba($light, 0.3)
+      margin-right: 1.25rem
       &-active
         background-color: $light
+  &-button
+    bottom: 0
+    &-prev, &-next
+      background-size: 3rem
+      width: 3rem
+      height: 1rem
+      bottom: 0
+      top: auto
+      &::after
+        display: none
+    &-prev
+      background: url('../img/prev.svg')
+      margin-right: 2.1rem
+    &-next
+      background: url('../img/next.svg')
+      margin-left: 0.85rem
+.swiper-container-horizontal > .swiper-pagination-bullets
+  position: relative
+  width: auto
+.swiper__switch
+  display: flex
+  margin: auto
+  align-items: center
+.swiper-button-next, .swiper-button-prev
+  position: unset
+  margin-top: 0
+
+  
