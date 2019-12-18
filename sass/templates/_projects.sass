@@ -2,23 +2,24 @@
   &-slide
     &-image
       margin-top: -13rem
-    display: flex
-    align-items: flex-start
-    flex-wrap: wrap
+      display: flex
+      align-items: flex-start
+      flex-wrap: wrap
     &__section
       display: flex
       flex-direction: row
-      &-title-left
-        width: 50%
+    &__value
+      max-width: 8rem
+      display: block
     &__text
       margin-bottom: 2.42rem
       height: auto
       margin-right: 2.1rem
-      width: 11rem
+      width: 100%
+      max-width: 10.5rem
       h4
-        font-size: 1.3rem
+        font-size: 1.28rem
         font-weight: normal
-        width: 50%
     &__heading
       font-size: 1.85rem
       line-height: 1.78rem
@@ -26,6 +27,7 @@
       color: $logoColor
       text-transform: uppercase
       margin-bottom: 0.64rem
+      // margin-right: 1rem
   &-pagination
     position: relative
     &-bullet
@@ -37,7 +39,7 @@
     bottom: 0
     &-prev, &-next
       background-size: 3rem
-      width: 3rem
+      width: 3.5rem
       height: 1rem
       bottom: 0
       top: auto
