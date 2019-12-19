@@ -55,17 +55,18 @@
   &__policy
     margin-bottom: 2.7rem
     font-size: 1.2rem
-.policy
+.policy, .policy1
   &__checkbox
     opacity: 0
     visibility: hidden
     &:checked +
-      .policy__label
+      .policy__label, .policy1__label
         &::before
           background: $logoColor url('../img/check.svg') no-repeat center / 0.8rem
   &__label
     display: flex
     align-items: center
+    cursor: pointer
     &::before
       content: ''
       width: 18px
