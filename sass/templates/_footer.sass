@@ -1,6 +1,7 @@
 .footer
-  background: $dark url(../img/footer-bg.jpg) no-repeat center / cover
+  background: url(../img/footer-bg.jpg) no-repeat center / cover, $dark
   padding-top: 3rem
+  padding-bottom: 0
   &__wrap
     background-color: $black
     max-width: 63.07rem
@@ -43,3 +44,34 @@
     background: $dark
     padding: 4.285rem 0
     margin-top: 3rem
+    bottom: 0
+  &__map
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+  &__map-title
+    font-family: 'Yeseva One', cursive
+    color: $logoColor
+    text-align: center
+    font-size: 1.428rem
+    max-width: 32.5rem
+    line-height: 2rem
+    margin-top: 0
+  &__social
+    display: flex
+    &-icon
+      height: 2rem
+      width: 2rem
+      background: $logoColor
+      margin: 1.5rem 1rem 3rem 0
+      display: flex
+      flex-direction: row
+      border-radius: 50%
+      align-items: center
+      justify-content: center
+      a
+        text-decoration: none
+#map
+  width: 100%
+  height: 33.25rem

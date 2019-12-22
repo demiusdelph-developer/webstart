@@ -38,9 +38,9 @@
       <div class="instagram hero__instagram"><a href="#" class="instagram__link">Instagram</a></div>
       <div class="container">
         <div class="hero__content">
-          <h1 class="title hero__title animated wow fadeIn">Турецкий ремонт 
+          <h1 class="title hero__title wow fadeIn" data-wow-duration="2s">Турецкий ремонт 
               в&nbsp;<span class="title--primary">ростове-на-дону</span></h1>
-          <p class="hero__text">Получите готовый ремонт под ключ в&nbsp;срок с экономией рабочего времени до&nbsp;45&nbsp;дней и 20% от стоимости материалов за счет организации работы</p>
+          <p class="hero__text animated wow fadeInRight delay-1s">Получите готовый ремонт под ключ в&nbsp;срок с экономией рабочего времени до&nbsp;45&nbsp;дней и 20% от стоимости материалов за счет организации работы</p>
           <button class="button hero__button button--primary button--primary--big" data-toggle="modal">Расчитать стоимость</button>
           <button class="button hero__button button--outline button--outline--big" data-toggle="modal">Отправить заявку</button>
         </div>
@@ -189,7 +189,7 @@
         </div>
         <div class="row">
           <div class="col-30">
-            <div class="card types__card">
+            <div class="card types__card wow fadeInLeft">
               <img src="img/types/type-1.jpg" alt="Косметический ремонт" class="card__image">
               <div class="card__text">
                 <h3 class="card__title">Косметический ремонт</h3>
@@ -207,7 +207,7 @@
             </div>
           </div>
           <div class="col-30">
-            <div class="card types__card">
+            <div class="card types__card wow fadeIn">
               <img src="img/types/type-2.jpg" alt="Капитальный ремонт" class="card__image">
               <div class="card__text">
                 <h3 class="card__title">Капитальный ремонт</h3>
@@ -225,7 +225,7 @@
             </div>
           </div>
           <div class="col-30">
-            <div class="card types__card">
+            <div class="card types__card wow fadeInRight">
               <img src="img/types/type-3.jpg" alt="Дизайнерский ремонт" class="card__image">
               <div class="card__text">
                 <h3 class="card__title">Дизайнерский ремонт</h3>
@@ -244,7 +244,7 @@
           </div>
         </div>
     </section>
-    <section class="section design">
+    <section class="section design ">
       <div class="container">
         <div class="section-title design__section-title">
           <h2 class="section-title__heading">Дизайн проект</h2>
@@ -338,6 +338,17 @@
           <button class="button button--primary footer__button footer__button--min">Отправить</button>
         </form>
       </div>
+      <div class="footer__map">
+          <span class="title footer__map-title">
+          Ростов на дону, Торговый центр Plaza
+Прямой телефон +7 (999) 768 32 99
+          </span>
+          <div class="footer__social">
+            <a class="footer__social-icon" href="mailto:demius_delph@hotmail.com"><img src="img/footer-email.svg" alt=""></a>
+            <a class="footer__social-icon" href="http://instagram.com/_u/dmitroshuvar/"><img src="img/footer-instagram.svg" alt=""></a>
+          </div>
+          <div id="map"></div></span>
+      </div>
     </div>
     <div class="footer__menu">
       <div class="container">
@@ -383,7 +394,9 @@
   </div>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="js/wow.min.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=74b898f4-6cc1-417a-aa12-b35af23b6612&lang=ru_RU" type="text/javascript">
+  </script>
 </body>
 </html>

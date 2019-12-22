@@ -19,7 +19,25 @@
 //   }); 
 // });
 
+new WOW().init();
 
+var wow = new WOW(
+  {
+    boxClass: 'design',
+    animateClass: 'fadeIn', 
+    iteration: 10,
+    offset: 600,
+    mobile: true,
+    live: true, 
+    callback: function(box) {
+      // the callback is fired every time an animation is started
+      // the argument that is passed in is the DOM node being animated
+    },
+    scrollContainer: null, 
+    resetAnimation: true,
+  }
+);
+wow.init();
 
 $(document).ready(function () {
   var modal = $('.modal'),
@@ -71,9 +89,48 @@ $(document).ready(function () {
       prevEl: '.swiper-button-prev',
     },
   });
-  var next = $('.swiper-button-next'),
-      prev = $('.swiper-button-next'),
-      bullets = $('.swiper-pagination');
-       
+
+
+// Дождёмся загрузки API и готовности DOM.
+ymaps.ready(function () {
+  var myMap = new ymaps.Map('map', {
+          center: [47.244729, 39.722810],
+          zoom: 18
+      }, {
+          searchControlProvider: 'yandex#search'
+      }),
+
+      // Создаём макет содержимого.
+      MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+          '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+      ),
+
+      myPlacemarkWithContent = new ymaps.Placemark([47.244604, 39.723175], {
+          hintContent: 'Собственный значок метки с контентом',
+          balloonContent: 'А эта — новогодняя',
+          iconContent: 'ТЦ "Декорум"'
+      }, {
+          // Опции.
+          // Необходимо указать данный тип макета.
+          iconLayout: 'default#imageWithContent',
+          // Своё изображение иконки метки.
+          iconImageHref: '../img/mapIcon.png',
+          // Размеры метки.
+          iconImageSize: [30, 36],
+          // Смещение левого верхнего угла иконки относительно
+          // её "ножки" (точки привязки).
+          iconImageOffset: [-5, -58],
+          // Смещение слоя с содержимым относительно слоя с картинкой.
+          iconContentOffset: [35, 5],
+          iconCaptionMaxWidth: [300],
+          // Макет содержимого.
+          iconContentLayout: MyIconContentLayout
+      });
+      myMap.behaviors.disable('scrollZoom');
+
+  myMap.geoObjects
+      //.add(myPlacemark)
+      .add(myPlacemarkWithContent);
+});
   
 });
