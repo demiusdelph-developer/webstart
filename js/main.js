@@ -23,10 +23,9 @@ new WOW().init();
 
 var wow = new WOW(
   {
-    boxClass: 'design',
-    animateClass: 'fadeIn', 
-    iteration: 10,
-    offset: 600,
+    boxClass: 'map',
+    animateClass: 'animated',
+    offset: 5000,
     mobile: true,
     live: true, 
     callback: function(box) {

@@ -47,6 +47,7 @@
     display: flex
     flex-direction: column
   &__input
+    outline: none
     margin-bottom: 3.482rem
     outline-color: $logoColor
     color: $light
@@ -55,12 +56,12 @@
   &__policy
     margin-bottom: 2.7rem
     font-size: 1.2rem
-.policy, .policy1
+.policy
   &__checkbox
     opacity: 0
     visibility: hidden
     &:checked +
-      .policy__label, .policy1__label
+      .policy__label
         &::before
           background: $logoColor url('../img/check.svg') no-repeat center / 0.8rem
   &__label
@@ -74,7 +75,10 @@
       height: 18px
       border: 1px solid $logoColor
       border-radius: 1px
+      cursor: pointer
       margin-right: 0.64rem
     &--center
       justify-content: center
+    &--light
+      color: $light
 
